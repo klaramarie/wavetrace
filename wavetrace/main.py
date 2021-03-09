@@ -771,7 +771,7 @@ def compute_satellite_los(in_path, satellite_lon, out_path, n=3,
       stdout=subprocess.PIPE, universal_newlines=True, check=True)
 
     # Move file
-     shutil.move(g.parent/'merged.tif',out_path)
+    shutil.move(g.parent/'merged.tif',out_path)
 
     # Clean up
     ut.rm_paths(tmp_path)
