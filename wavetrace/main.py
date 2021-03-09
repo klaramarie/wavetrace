@@ -3,6 +3,8 @@ CONVENTIONS:
     - All longitudes and latitudes below are referenced to the WGS84 ellipsoid, unless stated otherwise
 """
 from pathlib import Path 
+import shutil
+import os
 import re
 import csv
 import textwrap
