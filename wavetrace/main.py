@@ -677,7 +677,7 @@ def get_geoid_height(lon, lat, num_tries=3):
         - It would be good to rewrite this function so that it does not depend on internet access. For starters, see `https://github.com/vandry/geoidheight <https://github.com/vandry/geoidheight>`_, which uses the EGM2008 ellipsoid.
     """
     url = 'https://geographiclib.sourceforge.io/cgi-bin/GeoidEval'
-    data = {'input': '{!s}+{!s}'.format(lat, lon)}
+    data = {'input': '{!s} {!s}'.format(lat, lon)}
     pattern = r'EGM96</a>\s*=\s*<font color="blue">([\d\.\-]+)</font>'
     
     for i in range(num_tries):
